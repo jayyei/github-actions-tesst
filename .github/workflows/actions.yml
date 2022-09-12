@@ -10,8 +10,11 @@ jobs:
         run: |
           pwd 
           ls
-      - name: Cehckout the repository
+      # basicamente te permite inicializar tu propio repositorio en la vm que esta ejecutando el runner
+      - name: Checkout the repository
         uses: actions/checkout@v1
+        run: |
+          ls
       - name: Simple JS action
         id: greet
         uses: actions/hello-world-javascript-action@v1
