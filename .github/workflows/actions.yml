@@ -10,17 +10,26 @@ jobs:
         run: |
           pwd 
           ls
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          # git clone git@github:$GITHUB_REPOSITORY
+          # git checkout $GITHUB_SHA
       # basicamente te permite inicializar tu propio repositorio en la vm que esta ejecutando el runner
       - name: Checkout the repository
         uses: actions/checkout@v1
+
       - name: List files after checkout  
         run: |
           ls
+
       - name: Simple JS action
         id: greet
         uses: actions/hello-world-javascript-action@v1
         with: 
           who-to-greet: John
+
       - name: Log Greeting time
         run: echo "${{ steps.greet.output.time }}"
       
