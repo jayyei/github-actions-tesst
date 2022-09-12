@@ -13,6 +13,7 @@ jobs:
       # basicamente te permite inicializar tu propio repositorio en la vm que esta ejecutando el runner
       - name: Checkout the repository
         uses: actions/checkout@v1
+      - name: List files after checkout  
         run: |
           ls
       - name: Simple JS action
