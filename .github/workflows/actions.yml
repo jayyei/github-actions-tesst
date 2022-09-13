@@ -1,11 +1,30 @@
 name: Actions Workflow
 
 on:
-  schedule:
-    - cron: "0/5 * * * *"
+  # pull_request:
+  #   branches:
+  #     - master
+  #     - 'feature/*' # matches feature/featureA, feature/featureB, only one level, does not match fature/featureA/a
+  #     - 'feature/**' # matches feature/featureA/a
+  #     - '!feature/featC' # ignore this branch
+
+  #   tags:
+  #     - v1.*
+
+  #   paths:
+  #     - '**.js'
+    
   # push:
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+  #  branches:
+  #    - master
+  # repository_dispatch
+  #  types: [build] Se realiza al momento de hacer una peticion post al repo 
+  # schedule:
+  #  - cron: "0/5 * * * *"
+  # push:
+  # workflow_dispatch
+  # pull_request:
+  #  types: [closed, assigned, opened, reopened]
   
 
 jobs:
