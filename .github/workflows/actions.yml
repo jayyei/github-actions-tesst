@@ -14,9 +14,9 @@ on:
   #   paths:
   #     - '**.js'
     
-  # push:
-  #  branches:
-  #    - master
+  push:
+   branches:
+     - master
   # repository_dispatch
   #  types: [build] Se realiza al momento de hacer una peticion post al repo 
   # schedule:
